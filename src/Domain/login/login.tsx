@@ -20,9 +20,9 @@ const Login = () => {
 
 
     const handleSubmit=(values:Login)=>{
-        if (reCa)
+        // if (reCa)
             mutate(values);
-        else addAlert({type: "warning", message: "لطفا کادر من ربات نیستم را انتخاب کنید", timeout: 2})
+        // else addAlert({type: "warning", message: "لطفا کادر من ربات نیستم را انتخاب کنید", timeout: 2})
     }
 
     return (
@@ -38,12 +38,12 @@ const Login = () => {
                                 <h4 className="text-center">ورود</h4>
                                 <Input type="email" label="ایمیل" name="email" />
                                 <Input type="password" label="رمز عبور" name="password"/>
-                            <ReCAPTCHA
+{/*                             <ReCAPTCHA
                                 className="mb-5"
                                 sitekey={import.meta.env.VITE_GOOGLE_reCAPTCHA_SITE_KEY}
                                 onChange={(e) => setRec(e)}
                                 hl={"fa"}
-                            />
+                            /> */}
                                 <div className="text-center">
                                     <MutationButton  type="submit" className="btn btn-primary">
                                         ورود
