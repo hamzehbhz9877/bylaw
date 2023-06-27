@@ -1,0 +1,14 @@
+input:placeholder-shown {
+  text-overflow: ellipsis;
+}
+
+textarea {
+  resize: none !important;
+}
+
+.error-message{
+  color: red;
+}
+.form-group{
+  margin-bottom: $input-margin-bottom;
+}

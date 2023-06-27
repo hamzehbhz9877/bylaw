@@ -1,0 +1,9 @@
+.main{
+  margin: 100px 30px 30px 30px;
+}
+.panel__main {
+  padding: 100px calc(300px + 20px) 20px 20px;
+  @include media-breakpoint-down(md) {
+    padding-right: 20px ;
+  }
+}

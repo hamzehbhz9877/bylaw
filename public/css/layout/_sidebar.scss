@@ -1,0 +1,60 @@
+.panel__sidebar {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  border-left: 1px solid #d0d0d0;
+  top: 0;
+  right: 0;
+  width: $sidebar-width;
+  padding-bottom: 15px;
+  background: $sidebar-background;
+  z-index: $sidebar-z-index;
+  transition: $backdrop-transition;
+  overflow-y: auto;
+
+  a{
+    display: inline-block;
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .active{
+    opacity: .8;
+    position: relative;
+    color: #0063dc;
+    &::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgb(59 ,130, 246);
+      opacity: 0.125;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    right: -$sidebar-width;
+    z-index: 1100;
+  }
+  @include modifier("open") {
+    right: 0;
+  }
+}
+
+
+
+@include media-breakpoint-down(md) {
+  .navigation {
+    right: -$sidebar-width;
+    top: 0;
+
+    &.open {
+      right: 0;
+    }
+  }
+  .mobile-menu{
+    span{
+      font-size: 2.2rem;
+    }
+  }
+}
+
+

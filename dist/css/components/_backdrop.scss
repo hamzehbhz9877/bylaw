@@ -1,0 +1,15 @@
+.backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: $backdrop-background-color;
+  opacity: 0;
+  visibility: hidden;
+  inset: 0;
+  z-index: $zindex-modal-backdrop;
+  transition: $backdrop-transition;
+  @include modifier('open') {
+    opacity: $backdrop-opacity--open;
+    visibility: visible;
+  }
+}

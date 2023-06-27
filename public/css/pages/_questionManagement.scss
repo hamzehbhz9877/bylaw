@@ -1,0 +1,33 @@
+@import "../abstracts/mixins";
+
+.question-management{
+  @include element("table-title-overflow"){
+    display: block;
+    max-width: 500px;
+    min-width: -webkit-fill-available;
+  }
+}
+
+//modal
+.questions-format {
+  @include element("header-image") {
+    margin-top: 20px;
+    img {
+      width: 200px;
+      height: 200px !important;
+    }
+  }
+  @include element("body-correct-option") {
+    > div + div {
+      margin-right: 40px;
+    }
+
+  }
+  @include element("body-image") {
+    img {
+      margin-top: 20px;
+      width: 80px;
+      height: 80px !important;
+    }
+  }
+}

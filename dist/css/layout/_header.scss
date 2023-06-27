@@ -1,0 +1,30 @@
+
+.header {
+  height: $header-height;
+  background-color: $header-bg-color;
+  padding: 0 30px;
+  border-bottom: 1px solid #d0d0d0;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  @include element("item"){
+    a.active{
+      color:$header-list--active
+    }
+    &+.header__item{
+      margin-right: 30px;
+    }
+  }
+}
+
+.panel {
+  @include element("header") {
+    right: 300px;
+    @include media-breakpoint-down(md) {
+      right: 0;
+    }
+  }
+}

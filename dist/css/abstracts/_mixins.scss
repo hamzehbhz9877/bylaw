@@ -1,0 +1,42 @@
+@mixin on-event($self: false) {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+  @if $self {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin keyframes($fontame) {
+  @keyframes #{$fontame} {
+    @content;
+  }
+}
+
+@mixin element($fontame) {
+  @at-root #{&}__#{$fontame} {
+    @content;
+  }
+}
+
+@mixin modifier($fontame) {
+  @at-root #{&}--#{$fontame} {
+    @content;
+  }
+}
+
+@mixin sibling($fontame) {
+  @at-root #{&} + .#{$fontame} {
+    @content;
+  }
+}

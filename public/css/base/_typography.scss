@@ -1,0 +1,18 @@
+/**
+ * Basic typography style for copy text
+ */
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  direction: $direction-base;
+}
+
+p {
+  color: black;
+  margin: 1rem 0;
+  line-height: 1.9;
+}
+

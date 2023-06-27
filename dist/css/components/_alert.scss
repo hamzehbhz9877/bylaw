@@ -1,0 +1,119 @@
+.sweet-alert {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin-left: 20px;
+  justify-content: flex-start;
+  height: auto;
+  width: auto;
+  z-index: $alert-z-index;
+
+  p{
+    color: white;
+    padding: 10px;
+    margin-top: 0;
+  }
+
+  @include modifier('show') {
+    animation: toasting 0.4s ease-in-out forwards;
+  }
+
+  @include modifier('hide') {
+    animation: toastingFadeOut 0.5s ease forwards;
+  }
+  @include element('animate') {
+    animation-name: animate;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    position: absolute;
+    background: white;
+  }
+
+  @include element('wrapper') {
+    align-self: flex-end;
+    display: inline-block;
+    overflow: auto;
+    transition: all 2s ease;
+    & > div {
+      min-width: 230px;
+      max-width: 400px;
+      text-align: center;
+      border-radius: 3px;
+      box-shadow: 0 1px 6px rgb(0 0 0 / 8%), 0 1px 3px rgb(0 0 0 / 19%);
+      position: relative;
+      cursor: pointer;
+      overflow-y: hidden;
+      padding: 1.2rem 1.5rem;
+    }
+    @include modifier("success")
+    {
+      background-color: $alert-success ;
+    }
+    @include modifier("danger")
+    {
+      background-color: $alert-error ;
+    }
+    @include modifier("info")
+    {
+      background-color: $alert-info ;
+    }
+    @include modifier("warning")
+    {
+      background-color: $alert-warning ;
+    }
+  }
+}
+
+@include keyframes('animate') {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@include keyframes('toasting') {
+  0% {
+    transform: translate3d(400px, 0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate3d(-15px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@include keyframes('toastingFadeOut') {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    transform: translate3d(-15px, 0, 0);
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(400px, 0, 0);
+    opacity: 0;
+    max-height: 250px;
+  }
+  100% {
+    transform: translate3d(400px, 0, 0);
+    opacity: 0;
+    max-height: 0;
+  }
+}

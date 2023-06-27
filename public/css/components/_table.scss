@@ -1,0 +1,12 @@
+
+.table{
+  &-wrapper{
+    margin-top: 1rem;
+  }
+  min-width: max-content;
+  @include element("operation"){
+    svg+svg{
+      margin-right: 2rem;
+    }
+  }
+}
