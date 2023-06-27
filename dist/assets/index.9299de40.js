@@ -1,1 +1,0 @@
-import{j as o}from"./index.0069aa58.js";import{u as n}from"./useIsMutating.d69a0b5f.js";const u=({children:a,...t})=>{const s=n();return o("button",{...t,className:`mutations ${t.className}`,disabled:s>0,children:s>0?"...":a})};u.defaultProps={tag:"button"};export{u as M};

@@ -1,1 +1,0 @@
-import{j as o,r as e,M as s}from"./index.0069aa58.js";const t=({children:a})=>o("div",{className:"Modal__header",children:a}),d=({children:a})=>o("div",{className:"Modal__body",children:a}),l=({children:a})=>o("div",{className:"Modal__footer",children:a}),n=()=>e.exports.useContext(s);export{t as M,d as a,l as b,n as u};

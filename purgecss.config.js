@@ -1,7 +1,7 @@
 module.exports={
     blocklist: [],
     safelist: {
-        standard: [],
+        standard: [/^sweet-alert/],
         deep: [],
         greedy: [],
         keyframes: [],
