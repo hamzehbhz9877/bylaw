@@ -26,9 +26,9 @@ const Register = () => {
     });
 
     const handleSubmit = (values: Register) => {
-        if (reCa)
+        // if (reCa)
             mutate(values);
-        else addAlert({type: "warning", message: "لطفا کادر من ربات نیستم را انتخاب کنید", timeout: 2})
+        // else addAlert({type: "warning", message: "لطفا کادر من ربات نیستم را انتخاب کنید", timeout: 2})
     }
 
     return (
@@ -61,12 +61,12 @@ const Register = () => {
                                 <div className="col-md-6 col-sm-12"><Input type="password" label=" تکرار رمز عبور"
                                                                            name="rePassword"/></div>
                             </div>
-                            <ReCAPTCHA
+{/*                             <ReCAPTCHA
                                 className="mb-5"
                                 sitekey="6LdBLXQdAAAAAJMzP6tCoYI6A8SikY3Ripf_1t76"
                                 onChange={(e) => setRec(e)}
                                 hl={"fa"}
-                            />
+                            /> */}
                             <div className="text-center">
                                 <MutationButton type="submit" className="btn btn-primary">
                                     ثبت نام
