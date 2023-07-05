@@ -75,7 +75,7 @@ const Interceptor = ({children}: any) => {
                         // replace("/", {replace: true})
                     } else {
                         try {
-                            const {data}: AxiosResponse<Api<Authentication>> = await axios.post('http://localhost:5000/users/refreshToken', {refreshToken: cookie.refreshToken});
+                            const {data}: AxiosResponse<Api<Authentication>> = await axios.post('https://bylaw.onrender.com/users/refreshToken', {refreshToken: cookie.refreshToken});
                             if (data.isSuccess) {
                                 setCookie(data.data)
                                 axios.defaults.headers.common['Authorization'] = 'Bearer ' + data.data.token;
